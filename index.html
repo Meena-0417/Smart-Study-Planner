@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Study Planner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📚 Smart Study Planner</h1>
+            <p>Organize your study goals and boost productivity</p>
+        </header>
+
+        <!-- Add New Task Form -->
+        <section class="add-task">
+            <h2>Add New Study Task</h2>
+            <form id="taskForm">
+                <div class="form-group">
+                    <input type="text" id="taskTitle" placeholder="Task title (e.g., 'Math Chapter 5')" required>
+                </div>
+                <div class="form-group">
+                    <textarea id="taskDescription" placeholder="Description..."></textarea>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="taskDate">Due Date:</label>
+                        <input type="date" id="taskDate" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="taskPriority">Priority:</label>
+                        <select id="taskPriority">
+                            <option value="low">Low</option>
+                            <option value="medium">Medium</option>
+                            <option value="high">High</option>
+                        </select>
+                    </div>
+                </div>
+                <button type="submit">Add Task</button>
+            </form>
+        </section>
+
+        <!-- Progress Statistics Section -->
+        <section class="stats-section">
+            <h2>📊 Study Progress</h2>
+            <div id="stats" class="stats-container">
+                <!-- Stats will be dynamically updated -->
+            </div>
+        </section>
+
+        <!-- Tasks Display Section -->
+        <section class="tasks-section">
+            <div class="section-header">
+                <h2>Your Study Tasks</h2>
+                <div class="filter-controls">
+                    <select id="filterPriority">
+                        <option value="all">All Priorities</option>
+                        <option value="high">High</option>
+                        <option value="medium">Medium</option>
+                        <option value="low">Low</option>
+                    </select>
+                    <select id="filterStatus">
+                        <option value="all">All Status</option>
+                        <option value="pending">Pending</option>
+                        <option value="completed">Completed</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div id="tasksList" class="tasks-list">
+                <!-- Tasks will be dynamically inserted here -->
+            </div>
+        </section>
+
+        <!-- Visual Timeline Section -->
+        <section class="timeline-section">
+            <h2>📅 Study Timeline</h2>
+            <div id="timeline" class="timeline">
+                <!-- Timeline items will be dynamically inserted here -->
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
